@@ -273,8 +273,8 @@
             const yPosition = Math.random() * 100;
             
             // Speed based on boundary layer effect (faster at top, slower at bottom)
-            // Top particles: 3-6s, Bottom particles: 25-40s
-            const speed = 2.2 + (yPosition / 100)**1.5 * 15;
+            // Top particles: 2s, Bottom particles: 25-40s
+            const speed = 40 / (1 + 19*sin(1.5708*(yPosition / 100)));
             
             // Random delay
             const delay = Math.random() * 10;
